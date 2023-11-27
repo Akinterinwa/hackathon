@@ -1,0 +1,3 @@
+in the dropdown menu, i need to fix the way i pu the margin
+radio button needs to be flex very well.. instead of using margin
+put all the button inside a proper h1 or p element for easy screen read

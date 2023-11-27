@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <nav>
+        <div class="header-logo">
+            <!-- Add your logo image source here -->
+            <img src="./images/Shopify.com svg.png" alt="Shopify-Logo">
+        </div>
+        <div class="search-bar-container">
+            <img class="search-icon" src="./images/search.png" alt="Search Icon">
+            <input type="text" class="search-bar" placeholder="Search...">
+        </div>
+        <div class="user-info">
+            <div class="bell-icon">
+                <img src="./images/bell.png" alt="bell-icon">
+            </div>
+            <div class="login-info" onclick="toggleMenu()">
+                <div class="user">
+                    <p class="username">Davii collections</p>
+                    <span class="name-abv">DC</span>
+                </div>
+            </div>
+
+        </div>
+        <!-- CONTAINING ALL THE USER MUNU FOR THE DROPDOWN -->
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="top">
+                    <div class="display-sub-user">
+                        <div class="user-sub-info">
+                            <span class="name-abv">DC</span>
+                            <p class="sub-username">Davii collections</p>
+                        </div>
+                        <div class="check">
+                            <img src="images/check.svg" alt="check-button">
+                        </div>
+                    </div>
+                    <div class="stores">
+                        <img src="images/StoreMinor.svg" alt="store">
+                        <p>All stores</p>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="direction">
+                    <a href="#" class="sub-menu-link">
+                        <p>Help Center</p>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <p>Changelog</p>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <p>Community forums</p>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <p>Hire a Shopify Partner</p>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <p>Keyboard shortcuts</p>
+                    </a>
+                </div>
+                <hr>
+
+                <div class="gmail">
+                    <strong>Akinterinwa Oluwanifemi</strong>
+                    <p>akinterinwaoluwanifemi@gmail.com</p>
+                </div>
+
+                <div class="manage">
+                    <a href="#" class="sub-menu-link">
+                        <p>Manage Account</p>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <p>Logout</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- EXTENDED TRIAL SECTION -->
+    <section class="extended-trial" id="extend">
+        <div class="box-1">
+            <p>Extend your trial for $1/month for 3 months on select plans.</p>
+            <div class="inner-box">
+                <div class="select-plan">Select plan</div>
+                <img src="./images/cross.svg" alt="cancel-icon" onClick="cancel()">
+            </div>
+        </div>
+    </section>
+
+    <!-- SETUP GUILD SECTION -->
+    <section class="setup-section">
+        <div class="setup">
+            <div class="setup-guide">
+                <div class="dropdown">
+                    <h3>Setup guide</h3>
+                    <img src="./images/dropdown.svg" alt="dropdown-icon" onclick="toggleDropdown()">
+                </div>
+                <p>Use this personalized guide to get your store up and running.</p>
+                <div class="progress">
+                    <div id="current-number">
+                        <p><span id="number-display">0 / 5</span> completed</p>
+                    </div>
+                    <div id="progress-bar">
+                        <div id="progress-indicator"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SETUP GUILD DROPDOWN CONTENT -->
+            <div class="dropdown-section" id="dropdown-section">
+                <div class="store-section">
+                    <div class="main content-bx active">
+                        <div class="section-head">
+                            <div class="shopping-item">
+                                <span id="shopping-item-checkbox-status" aria-live="polite"></span>
+                                <div onclick="toggleButton(20, this)" class="shopping-item-checkbox"
+                                    id="shopping-item-checkbox" aria-label="Mark check as done">
+                                    <!-- initial dotted item -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="not-completed-icon" aria-hidden="true"
+                                        id="not-completed-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
+                                    </svg>
+                                    <!-- markes for done -->
+                                    <img src="./images/spinner-2.svg" aria-hidden="true" alt="black-check"
+                                        class="completed-icon mark-done-icon hidden" id="completed-icon">
+                                    <!-- loading spnner -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        class="loading-spinner-icon hidden" width="24" height="24" viewBox="0 0 24 24"
+                                        id="loading-spinner-icon" fill="none">
+                                        <path
+                                            d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                                            stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="display-heading">
+                                <p>Name your store</p>
+                            </div>
+                        </div>
+                        <div class="section-with-image">
+                            <div class="section-content">
+                                <div class="middle-content">
+                                    <p>Choose a theme and add your logo, colors, and images to reflect your brand.
+                                        <span>Learn
+                                            more</span>
+                                    </p>
+                                </div>
+                                <div class="middle-button">
+                                    Customize theme
+                                </div>
+                            </div>
+                            <div class="section-img">
+                                <img src="./images/Name your store.img.png" alt="customize-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="store-section">
+                    <div class="main content-bx">
+                        <div class="section-head">
+                            <div class="shopping-item">
+                                <span id="shopping-item-checkbox-status" aria-live="polite"></span>
+                                <div onclick="toggleButton(20, this)" class="shopping-item-checkbox"
+                                    id="shopping-item-checkbox" aria-label="Mark check as done">
+                                    <!-- initial dotted item -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="not-completed-icon" aria-hidden="true"
+                                        id="not-completed-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
+                                    </svg>
+                                    <!-- markes for done -->
+                                    <img src="./images/spinner-2.svg" aria-hidden="true" alt="black-check"
+                                        class="completed-icon mark-done-icon hidden" id="completed-icon">
+                                    <!-- loading spnner -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        class="loading-spinner-icon hidden" width="24" height="24" viewBox="0 0 24 24"
+                                        id="loading-spinner-icon" fill="none">
+                                        <path
+                                            d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                                            stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="display-heading">
+                                <p>Name your store</p>
+                            </div>
+                        </div>
+                        <div class="section-with-image">
+                            <div class="section-content">
+                                <div class="middle-content">
+                                    <p>Choose a theme and add your logo, colors, and images to reflect your brand.
+                                        <span>Learn
+                                            more</span>
+                                    </p>
+                                </div>
+                                <div class="middle-button">
+                                    Customize theme
+                                </div>
+                            </div>
+                            <div class="section-img">
+                                <img src="./images/Name your store.img.png" alt="customize-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="store-section">
+                    <div class="main content-bx">
+                        <div class="section-head">
+                            <div class="shopping-item">
+                                <span id="shopping-item-checkbox-status" aria-live="polite"></span>
+                                <div onclick="toggleButton(20, this)" class="shopping-item-checkbox"
+                                    id="shopping-item-checkbox" aria-label="Mark check as done">
+                                    <!-- initial dotted item -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="not-completed-icon" aria-hidden="true"
+                                        id="not-completed-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
+                                    </svg>
+                                    <!-- markes for done -->
+                                    <img src="./images/spinner-2.svg" aria-hidden="true" alt="black-check"
+                                        class="completed-icon mark-done-icon hidden" id="completed-icon">
+                                    <!-- loading spnner -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        class="loading-spinner-icon hidden" width="24" height="24" viewBox="0 0 24 24"
+                                        id="loading-spinner-icon" fill="none">
+                                        <path
+                                            d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                                            stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="display-heading">
+                                <p>Name your store</p>
+                            </div>
+                        </div>
+                        <div class="section-with-image">
+                            <div class="section-content">
+                                <div class="middle-content">
+                                    <p>Choose a theme and add your logo, colors, and images to reflect your brand.
+                                        <span>Learn
+                                            more</span>
+                                    </p>
+                                </div>
+                                <div class="middle-button">
+                                    Customize theme
+                                </div>
+                            </div>
+                            <div class="section-img">
+                                <img src="./images/Name your store.img.png" alt="customize-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="store-section">
+                    <div class="main content-bx">
+                        <div class="section-head">
+                            <div class="shopping-item">
+                                <span id="shopping-item-checkbox-status" aria-live="polite"></span>
+                                <div onclick="toggleButton(20, this)" class="shopping-item-checkbox"
+                                    id="shopping-item-checkbox" aria-label="Mark check as done">
+                                    <!-- initial dotted item -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="not-completed-icon" aria-hidden="true"
+                                        id="not-completed-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
+                                    </svg>
+                                    <!-- markes for done -->
+                                    <img src="./images/spinner-2.svg" aria-hidden="true" alt="black-check"
+                                        class="completed-icon mark-done-icon hidden" id="completed-icon">
+                                    <!-- loading spnner -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        class="loading-spinner-icon hidden" width="24" height="24" viewBox="0 0 24 24"
+                                        id="loading-spinner-icon" fill="none">
+                                        <path
+                                            d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                                            stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="display-heading">
+                                <p>Name your store</p>
+                            </div>
+                        </div>
+                        <div class="section-with-image">
+                            <div class="section-content">
+                                <div class="middle-content">
+                                    <p>Choose a theme and add your logo, colors, and images to reflect your brand.
+                                        <span>Learn
+                                            more</span>
+                                    </p>
+                                </div>
+                                <div class="middle-button">
+                                    Customize theme
+                                </div>
+                            </div>
+                            <div class="section-img">
+                                <img src="./images/Name your store.img.png" alt="customize-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="store-section">
+    
+                    <div class="main content-bx">
+                        <div class="section-head">
+                            <div class="shopping-item">
+                                <span id="shopping-item-checkbox-status" aria-live="polite"></span>
+                                <div onclick="toggleButton(20, this)" class="shopping-item-checkbox"
+                                    id="shopping-item-checkbox" aria-label="Mark check as done">
+                                    <!-- initial dotted item -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="not-completed-icon" aria-hidden="true"
+                                        id="not-completed-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
+                                    </svg>
+                                    <!-- markes for done -->
+                                    <img src="./images/spinner-2.svg" aria-hidden="true" alt="black-check"
+                                        class="completed-icon mark-done-icon hidden" id="completed-icon">
+                                    <!-- loading spnner -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        class="loading-spinner-icon hidden" width="24" height="24" viewBox="0 0 24 24"
+                                        id="loading-spinner-icon" fill="none">
+                                        <path
+                                            d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                                            stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="display-heading">
+                                <p>Name your store</p>
+                            </div>
+                        </div>
+                        <div class="section-with-image">
+                            <div class="section-content">
+                                <div class="middle-content">
+                                    <p>Choose a theme and add your logo, colors, and images to reflect your brand.
+                                        <span>Learn
+                                            more</span>
+                                    </p>
+                                </div>
+                                <div class="middle-button">
+                                    Customize theme
+                                </div>
+                            </div>
+                            <div class="section-img">
+                                <img src="./images/Name your store.img.png" alt="customize-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

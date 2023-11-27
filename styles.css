@@ -1,0 +1,569 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: var(--Background, #F1F1F1);
+    font-family: 'Inter', sans-serif;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #ccc;
+}
+
+/* NAVIGATION */
+
+nav {
+    background-color: #1A1A1A;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    width: 124px;
+    height: Hug (30px);
+    gap: 7.52px;
+}
+
+
+.search-bar-container {
+    display: flex;
+    width: 480px;
+    padding: 8px;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid var(--stroke-s-200, #616161);
+    background: var(--grey-g-200, #303030);
+}
+
+.search-bar {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #303030;
+    color: #B5B5B5;
+}
+
+.user-info {
+    display: flex;
+    gap: 8px;
+}
+
+.bell-icon {
+    width: 32px;
+    border-radius: 8px;
+    background: #303030;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.login-info .user {
+    background: var(--grey-grey-200, #303030);
+    display: flex;
+    padding: 2px 2px 2px 8px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+}
+
+.login-info .username {
+    color: var(--font-light, #E3E3E3);
+}
+
+.name-abv {
+    display: flex;
+    height: 28px;
+    width: 28px;
+    padding: 9px 5px 10px 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: #36FBA1;
+    color: #00000066;
+}
+
+/* CONTAINING ALL THE USER MUNU FOR THE DROPDOWN 
+///////////////////////////////////////////////*/
+/* START */
+.dropdown-content-wrap {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.dropdown-content-wrap.open-content {
+    max-height: 1000px;
+}
+
+
+.sub-menu-wrap {
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    width: 330px;
+    color: black;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.sub-menu-wrap.open-menu {
+    max-height: 600px;
+}
+
+.sub-menu {
+    display: flex;
+    width: 320px;
+    padding: 6px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    border-radius: 14px;
+    border: 1px solid var(--stroke-s-50, #DBDBDB);
+    background: var(--White, #FFF);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+    margin: 10px;
+}
+
+.user-sub-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* contents inside the sub menu  */
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 6px 0;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 8px;
+    padding: 0 6px;
+}
+
+.sub-menu-link p {
+    width: 100%;
+    margin: 0;
+}
+
+.sub-menu-link:hover span {
+    transform: translateX(5px);
+}
+
+.sub-menu-link:hover p {
+    font-weight: 600;
+}
+
+.top {
+    display: flex;
+    padding: 0px 6px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.display-sub-user {
+    display: flex;
+    padding: 4px 12px 4px 8px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 8px;
+    width: 288px;
+    background: var(--states-hover, #F1F1F1);
+}
+
+.stores {
+    display: flex;
+    padding: 6px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 8px;
+}
+
+.direction,
+.manage {
+    display: flex;
+    padding: 0px 6px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    align-self: stretch;
+}
+
+.gmail {
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 8px;
+}
+
+.gmail p {
+    color: var(--grey-grey-100,
+            var(--font-mid-2, #616161));
+}
+
+/* END */
+/* 
+///////////////////////////////
+//////EXTENDED TRIAL SECTION */
+
+.extended-trial {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 32px;
+}
+
+
+.extended-trial .box-1 {
+    display: flex;
+    width: 800px;
+    padding: 12px 8px 12px 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--grey-grey-300, #1A1A1A);
+    color: white;
+}
+
+.inner-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.select-plan {
+    display: flex;
+    padding: 6px 12px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: var(--White, #FFF);
+    box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
+    color: var(--font-dark, #323232);
+}
+
+/* SETUP GUILD SECTION  */
+.setup-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.setup {
+    display: flex;
+    width: 800px;
+    padding: 8px;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+    border-radius: 18px;
+    border: 1px solid var(--stroke-s-50, #DBDBDB);
+    background: var(--White, #FFF);
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+    margin-top: 16px;
+
+}
+
+.setup-guide {
+    padding: 8px;
+}
+
+.dropdown {
+    display: flex;
+    gap: 41em;
+}
+
+.dropdown h3 {
+    margin-bottom: 0;
+}
+
+.setup-guide .progress {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* SETUP GUILD DROPDOWN SECTION  */
+.dropdown-section {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.dropdown-section.show {
+    max-height: 600px;
+}
+
+
+
+/*  */
+
+
+
+
+/*  */
+
+.setup-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.setup {
+    display: flex;
+    width: 800px;
+    padding: 8px;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+    border-radius: 18px;
+    border: 1px solid var(--stroke-s-50, #DBDBDB);
+    background: var(--White, #FFF);
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+    margin-top: 16px;
+
+}
+
+.setup-guide {
+    padding: 8px;
+}
+
+.dropdown {
+    display: flex;
+    gap: 41em;
+}
+
+.dropdown h3 {
+    margin-bottom: 0;
+}
+
+.setup-guide .progress {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* SETUP GUILD DROPDOWN SECTION  */
+
+.customize-section,
+.product-section,
+.domain-section,
+.store-section,
+.payment-section {
+    display: flex;
+    padding: 0 8px 0 8px;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 10px;
+    margin: 17px 0 19px 8px;
+}
+
+.customize-section .customize,
+.product-section .product,
+.domain-section .domain,
+.store-section .store,
+.payment-section .payment {
+    display: flex;
+    gap: 1rem;
+}
+
+.customize-content .customize-button,
+.product-section .customize-button,
+.domain-section .customize-button,
+.store-section .middle-button,
+.payment-section .customize-button {
+    width: fit-content;
+    color: #F6F3F6;
+    display: flex;
+    padding: 6px 12px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+    border-top: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.20));
+    border-right: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.20));
+    border-left: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.20));
+    background: #404040;
+    box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333, 0px 2px 0px 0px #000;
+}
+
+/* this is the exmaple i made */
+.section-head {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-content {
+    width: 89%;
+}
+
+.section-content .middle-content {
+    margin-bottom: 16px;
+}
+
+/* css for the spinner */
+@keyframes zoom-in-spin {
+    from {
+        transform: scale(0) rotate(270deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.shopping-item-checkbox {
+    background-color: transparent;
+    border: none;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    border: 2px solid #b5b5b5;
+
+    transition: all 100ms ease-in;
+}
+
+.shopping-item-checkbox:focus {
+    outline: 4px solid #005bd3;
+    outline-offset: 4px;
+}
+
+.shopping-item-checkbox:focus .not-completed-icon circle {
+    fill: #d9d9d9;
+    stroke-dasharray: 0 0;
+}
+
+.shopping-item-checkbox:hover .not-completed-icon circle {
+    stroke-dasharray: 0 0;
+}
+
+.completed-icon {
+    animation-name: zoom-in-spin;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}
+
+.loading-spinner-icon {
+    animation-duration: 1000ms;
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* SECTION OF DROPDOWN  */
+.section-head .display-heading {
+    position: relative;
+    color: #333;
+}
+
+.section-with-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+
+.content-bx.active .section-with-image {
+    height: 126px;
+    margin-left: 36px;
+}
+
+.content-bx.active {
+    padding: 12px 8px 0 8px;
+    align-items: center;
+    gap: 96px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: #F3F3F3;
+}
+
+
+
+/* PROGRESS BAR */
+#progress-bar {
+    width: 72px;
+    height: 4px;
+    background-color: #E3E3E3;
+    position: relative;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+#progress-indicator {
+    height: 100%;
+    width: 0;
+    background-color: #1A1A1A;
+    transition: width 3s ease-in-out;
+    border-radius: 10px;
+}
+
+.selected {
+    color: #fff;
+}
+
+#current-number {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+
+/* ////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////// */
+
+@media only screen and (max-width: 767px) {
+    /* Styles for smartphones */
+
+}
