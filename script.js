@@ -12,7 +12,6 @@ function toggleMenu(){
 
 ///THIS FUNCTION WILL OPEN AND CLOSE THE SETUP GUILD SECTION
 function toggleDropdown() {
-  console.log(dropdownSection)
   dropdownSection.classList.toggle("show");
 }
 
