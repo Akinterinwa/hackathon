@@ -56,7 +56,16 @@ nav {
     background: var(--grey-g-200, #303030);
     cursor: pointer;
 }
-
+.search-bar-container:active{
+    border-radius: 8px;
+border: 2px solid var(--White, #FFF);
+background: var(--grey-g-200, #303030);
+}
+.search-bar-container:focus{
+    border-radius: 8px;
+border: 2px solid var(--White, #FFF);
+background: var(--grey-g-200, #303030);
+}
 .search-bar {
     width: 100%;
     border: none;
@@ -92,10 +101,21 @@ nav {
     align-items: center;
     gap: 8px;
     border-radius: 8px;
+    transition: all 100ms ease-in;
 }
 .login-info .user:hover, .bell-icon:hover {
     border-radius: 8px;
 background: var(--font-mid-2, #616161);
+}
+.login-info .user:active,  .bell-icon:active{
+    border-radius: 8px;
+background: var(--grey-grey-50, #656266);
+}
+.login-info .user:focus, .bell-icon:focus {
+    border-radius: 8px;
+background: var(--grey-grey-50, #656266);
+outline: 4px solid #005bd3;
+outline-offset:4px ;
 }
 
 .login-info .username {
@@ -175,6 +195,54 @@ background: var(--font-mid-2, #616161);
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+/* alert */
+.bell-dropdown {
+    display: inline-flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border-radius: 14px;
+    border: 1px solid var(--stroke-s-50, #DBDBDB);
+    background: var(--White, #FFF);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    top: 16%;
+    display: none;
+    right: 1%;
+    width: 383px;
+    transition: max-height 0.5s;
+}
+
+.alerts p{
+    color: var(--font-dark, var(--grey-g-200, #303030));
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 19.6px */
+}
+.bell-dropdown-content{
+    color: var(--font-mid-2, #616161);
+font-family: Inter;
+font-size: 13px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%;
+display: flex;
+padding: 16px;
+align-items: center;
+gap: 8px;
+background: var(--states-hover, #F1F1F1);
+margin-left: 11px;
+}
+.alert-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
 }
 
 
@@ -728,7 +796,14 @@ box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
         display: flex;
         gap: 17em;
     }
+    .dropdown-section.show{
+        display: table;
+    border: 1px solid var(--stroke-s-50, #DBDBDB);
+    background: var(--White, #FFF);
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+}
 
+    }
     .setup-section {
         width: auto;
     }

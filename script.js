@@ -3,6 +3,7 @@
 const dropdownSection = document.getElementById("dropdown-section");
 const subMenu = document.getElementById('subMenu');
 const extendTrial = document.getElementById('extend');
+const extendTrialMobile = document.getElementById('extend-mobile');
 
 
 // THIS FUNCTION WILL OPEN THE USER-MENU IN THE TOP RIGHT CONTAING THE DETAILS
@@ -19,9 +20,17 @@ function toggleDropdown() {
 function cancel() {
   extendTrial.style.display = 'none'
 };
+// THIS FUNCTON WILL CLOSE THE TRIAL SECTION MOBILE
+function cancel() {
+  extendTrialMobile.style.display = 'none';
+};
 
 
 
+const bellMenu = document.getElementById('bell-menu')
+function toggleBell(){
+  bellMenu.style.display = (bellMenu.style.display === 'block') ? 'none' :  'block' ;
+}
 //
 
 
